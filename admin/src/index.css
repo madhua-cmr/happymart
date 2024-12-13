@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities{
+
+  .active-link {
+    @apply text-sky-900 font-bold relative after:w-[40%] after:h-[2px] after:rounded-full after:bg-cyan-800 after:absolute after:-bottom-1 after:left-1;
+  }
+}
