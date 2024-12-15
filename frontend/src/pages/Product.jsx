@@ -26,7 +26,7 @@ const Product = () => {
   return (
     <section>
       <div className="max-padd-container">
-        <div className="max-padd-container items-center flex gap-12 flex-col md:items-center xl:flex-row bg-white py-16 rounded-2xl">
+        <div className="max-padd-container  flex gap-12 flex-col md:items-center xl:flex-row bg-white py-16 rounded-2xl">
           <div className="flex bg-orange-400  gap-x-2 xl:flex-1 ">
             <div className="   flex-col gap-[7px] max-sm:flex-1/4 max-sm:flex-1/4 bg-red-600 flex-wrap">
               {product.image.map((item, i) => (
