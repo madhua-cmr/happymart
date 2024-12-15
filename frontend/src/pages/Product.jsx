@@ -117,7 +117,7 @@ const Product = () => {
           subCategory={product.subCategory}
         />
       </div>
-      <Footer />
+  
     </section>
   );
 };
