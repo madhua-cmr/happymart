@@ -50,9 +50,9 @@ if(token){
   return (
     
     <section>
-      <div className="max-padd-container">
-        <div className="max-padd-container flex py-10 rounded-2xl my-16 bg-white max-xl:mt-8 ">
-          <div className="flex flex-col sm:flex-col items-center justify-center m-auto  rounded-md ">
+      <div className="max-padd-container ">
+        <div className="max-padd-container  flex py-10 rounded-2xl justify-center  items-center my-16 bg-white max-xl:mt-8 ">
+          <div className="flex flex-col sm:flex-col items-center   m-auto  rounded-md ">
             <h2 className="h2">{currState==="login"?"Login":"Sign Up"}</h2>
             <form  onSubmit={onSubmitHandler} action="" className="flex justify-center p-6 gap-3 flex-1  flex-col ">
               {currState==="signup"&&(
@@ -62,7 +62,7 @@ if(token){
               </div>)
               } 
               <div className="flex flex-col w-full">
-               <label htmlFor="email" className="text-[16px] font-semibold my-4 ">Email</label>
+               <label htmlFor="email" className="text-[16 px] font-semibold my-4 ">Email</label>
                <input type="text "  onChange={(e)=>setEmail(e.target.value)}  value={email} className="w-full p-2 outline-none rounded-md shadow bg-slate-100" placeholder="Your Email" />
               </div>
               <div className="flex flex-col w-full">
