@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+
 import contact from "../assets/contact.jpg";
 import { useForm} from "@formspree/react";
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section className="max-padd-container    rounded-2xl mt-8  bg-white">
       <div className=" flex gap-4 flex-col items-center mx-4   sm:my-10 sm:flex-row p-4">
-        <div className="flex-1  bg-slate-400  ">
+        <div className="flex-1  ">
           <img src={contact} alt="" className="rounded-md object-cover " />
         </div>
         <div className=" flex-1 w-full ">
@@ -51,7 +51,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Footer />
+      
     </section>
   );
 };

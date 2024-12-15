@@ -5,7 +5,7 @@ import { BsCashCoin } from "react-icons/bs";
 import { GiReturnArrow } from "react-icons/gi";
 const Features = () => {
   return (
-    <section className="max-padd-container mb-14">
+    <section id="feature" className="max-padd-container mb-14">
         <h2 className="text-center text-[18px] font-bold  ">Our Promise</h2>
         <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3 xs:grid-col-2 gap-8 max-padd-container m-10">
             

@@ -13,6 +13,7 @@ import Orders from "./pages/Orders"
 import Verify from "./pages/Verify"
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -34,9 +35,10 @@ function App() {
        <Route path="/place-order" element={<PlaceOrder/>}/>
        <Route path="/orders" element={<Orders/>}/>
        <Route path="/verify" element={<Verify/>}/>
- 
+        
        
       </Routes>
+      <Footer/>
     </main>
     
   )

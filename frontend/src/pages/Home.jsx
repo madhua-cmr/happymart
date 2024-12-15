@@ -1,4 +1,4 @@
-import Footer from "../components/Footer"
+
 import Hero from "../components/Hero"
 import NewArrivals from "../components/NewArrivals"
 import PopularProducts from "../components/PopularProducts"
@@ -13,7 +13,7 @@ const Home = () => {
      <NewArrivals/>
      <PopularProducts/>
      <Features/>
-     <Footer/>
+ 
     </div>
   )
 }

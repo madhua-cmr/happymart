@@ -19,7 +19,7 @@ const Footer = () => {
             <h2 className=" mt-5 text-[16px] font-bold">Useful Links</h2>
             <Link to="/about" >Our Story</Link>
             <Link to="/collection">Explore Products</Link>
-            <Link to="/about">Our Features</Link>
+            <a href="/#feature">Our Features</a>
             <Link to="/contact">Get in Touch</Link>
             <Link to="/about">Privacy Statement</Link>
 
@@ -33,9 +33,9 @@ const Footer = () => {
         <div className=" mt-5 flex flex-col gap-4 mx-2">
             <h2 className="text-[16px] font-bold">Follow Our Socials</h2>
             <div className="flex gap-4 mt-2">
-                 <a href="" className="text-2xl text-white"><FaInstagram /></a>
-            <a href="" className="text-2xl text-white"><CiFacebook /></a>
-            <a href="" className="text-2xl text-white"><AiOutlineLinkedin /></a>
+                 <a href="https://www.instagram.com/madhumitha_a/" className="text-2xl text-white"><FaInstagram /></a>
+            <a href="https://www.facebook.com/share/19d9x97C3T/" className="text-2xl text-white"><CiFacebook /></a>
+            <a href="https://www.linkedin.com/in/madhumitha-a-b30ba5252" className="text-2xl text-white"><AiOutlineLinkedin /></a>
             <a href="" className="text-2xl text-white"><FaXTwitter /></a> 
         </div></div>
       </div>
