@@ -52,7 +52,7 @@ if(token){
     <section>
       <div className="max-padd-container ">
         <div className="max-padd-container  flex py-10 rounded-2xl justify-center  items-center my-16 bg-white max-xl:mt-8 ">
-          <div className="flex flex-col sm:flex-col items-center   m-auto  rounded-md ">
+          <div className="flex flex-col sm:flex-col items-center  p-2 m-auto  rounded-md ">
             <h2 className="h2">{currState==="login"?"Login":"Sign Up"}</h2>
             <form  onSubmit={onSubmitHandler} action="" className="flex justify-center p-6 gap-3 flex-1  flex-col ">
               {currState==="signup"&&(
