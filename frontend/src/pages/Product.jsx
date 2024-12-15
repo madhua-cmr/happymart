@@ -27,24 +27,24 @@ const Product = () => {
     <section>
       <div className="max-padd-container">
         <div className="max-padd-container  flex gap-12 flex-col md:items-center xl:flex-row bg-white py-16 rounded-2xl">
-          <div className="flex bg-orange-400  gap-x-2 xl:flex-1 ">
-            <div className="   flex-col gap-[7px] max-sm:flex-1/4 max-sm:flex-1/4 bg-red-600 flex-wrap">
+          <div className="flex   gap-x-2  ">
+            <div className="  flex flex-col gap-[4px] flex-1/2 max-sm:flex-1/4   flex-wrap">
               {product.image.map((item, i) => (
                 <img
                   onClick={() => setImage(item)}
                   src={item}
                   key={i}
                   alt="productImg"
-                  className="max-h-[70px] rounded-lg"
+                  className="max-w-[70px] rounded-lg"
                 />
               ))}
             </div>
 
-            <div className="flex-1 max-w-96 bg-black  ">
+            <div className="flex-1 max-w-96">
               <img src={image} alt="image" className="rounded " />
             </div>
           </div>
-          <div className="flex bg-slate-300 flex-1 flex-col  gap-4 max-xl:ml-40 max-sm:m-0">
+          <div className="flex  flex-1 flex-col  gap-4 max-xl:ml-40 max-sm:m-0">
             <h3 className="text-[18px] capitalize font-bold ">
               {product.name}
             </h3>
