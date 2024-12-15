@@ -26,9 +26,9 @@ const Footer = () => {
         </div>
         <div className=" mt-5 flex flex-col mx-2 gap-2">
             <h2 className="text-[16px] font-bold">Talk to Us</h2>
-            <p className="inline-flex items-center gap-2"> <MdPhoneAndroid className="text-[18px]" />+91 84384387757</p>
-            <p className="inline-flex items-center gap-2 "><MdOutlineMailOutline className="text-[18px]"/>support@happymart.com</p>
-            <p className="inline-flex items-center gap-2"><LiaMapMarkedAltSolid  className="text-[18px]"/>Main road,Chinnamanur,Thenidt - 625515</p>
+            <p className="inline-flex items-center gap-2"> <MdPhoneAndroid className="text-[25px]" />+91 84384387757</p>
+            <p className="inline-flex items-center gap-2 "><MdOutlineMailOutline className="text-[25px]"/>support@happymart.com</p>
+            <p className="inline-flex items-center gap-2"><LiaMapMarkedAltSolid  className="text-[25px]"/>Main road,Chinnamanur,Thenidt - 625515</p>
         </div>
         <div className=" mt-5 flex flex-col gap-4 mx-2">
             <h2 className="text-[16px] font-bold">Follow Our Socials</h2>
