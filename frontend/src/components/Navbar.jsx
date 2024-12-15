@@ -13,7 +13,7 @@ const Navbar = ({containerStyles,toggleMenu,menuOpened}) => {
     {to:"/",label:"Home",icon:<FcHome />},
     {to:"/collection",label:"Collections",icon:<PiDresser className=" text-black xl:text-white  "/>},
     {to:"/about",label:"About us",icon:<TbHexagonLetterWFilled className="text-black xl:text-white"/>},
-    {to:"/mailto:support@happymart.com",label:"Contact",icon:<FcContacts />}
+    {to:"/contact",label:"Contact",icon:<FcContacts />}
   ]
   
   

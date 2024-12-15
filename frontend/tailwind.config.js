@@ -11,7 +11,7 @@ export default {
       },
       backgroundImage:{
         hero:"url(./assets/bg.webp)",
-        
+       
       }
     },
   },

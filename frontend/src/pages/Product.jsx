@@ -35,17 +35,17 @@ const Product = () => {
     return (
       <section >
         <div className="max-padd-container">
-          <div className="max-padd-container flex gap-12 flex-col xl:flex-row bg-white py-16 rounded-2xl" >
-            <div className="flex flex-1 gap-x-2 xl:flex-1 ">
-               <div className="flexCenter flex-col gap-[7px] flex-wrap">{product.image.map((item,i)=>(
+          <div className="max-padd-container flex gap-12 flex-col md:items-center xl:flex-row bg-white py-16 rounded-2xl" >
+            <div className="flex  gap-x-2 xl:flex-1 ">
+               <div className="  flexCenter flex-col gap-[7px] flex-wrap">{product.image.map((item,i)=>(
                 <img onClick={()=>setImage(item)}src={item} key={i} alt="productImg" className="max-h-[89px] rounded-lg"/>
               ))}</div>
             
-          <div className="max-h-[377px] w-auto flex">
-          <img src={image} alt="image"className="rounded-xl bg-gray-10" />
+          <div className="flex-1 max-w-96">
+          <img src={image} alt="image"className="rounded" />
           </div>
         </div>
-        <div className="flex flex-col gap-4 ">
+        <div className="flex flex-1 flex-col  gap-4 max-xl:ml-40 max-sm:m-0">
           <h3 className="text-[18px] capitalize font-bold ">{product.name}</h3>
           <div className="flex ">
           <h3 className="text-[18px] font-bold">{currency} {product.price}</h3>
