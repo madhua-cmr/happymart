@@ -17,18 +17,18 @@ const Footer = () => {
         </div>
         <div className="flex flex-col mx-10 gap-2">
             <h2 className=" mt-5 text-[16px] font-bold">Useful Links</h2>
-            <Link to="/order" >Our Story</Link>
-            <Link to="/products">Explore Products</Link>
-            <Link to="/services">Our Features</Link>
+            <Link to="/about" >Our Story</Link>
+            <Link to="/collection">Explore Products</Link>
+            <Link to="/about">Our Features</Link>
             <Link to="/contact">Get in Touch</Link>
-            <Link to="/policy">Privacy Statement</Link>
+            <Link to="/about">Privacy Statement</Link>
 
         </div>
         <div className=" mt-5 flex flex-col mx-10 gap-2">
             <h2 className="text-[16px] font-bold">Talk to Us</h2>
-            <p className="inline-flex items-center gap-2"> <MdPhoneAndroid />+91 84384387757</p>
-            <p className="inline-flex items-center gap-2 "><MdOutlineMailOutline />support@happymart.com</p>
-            <p className="inline-flex items-center gap-2"><LiaMapMarkedAltSolid />Main road,Chinnamanur,Thenidt - 625515</p>
+            <p className="inline-flex items-center gap-2"> <MdPhoneAndroid className="text-[18px]" />+91 84384387757</p>
+            <p className="inline-flex items-center gap-2 "><MdOutlineMailOutline className="text-[18px]"/>support@happymart.com</p>
+            <p className="inline-flex items-center gap-2"><LiaMapMarkedAltSolid  className="text-[18px]"/>Main road,Chinnamanur,Thenidt - 625515</p>
         </div>
         <div className=" mt-5 flex flex-col gap-4 mx-10">
             <h2 className="text-[16px] font-bold">Follow Our Socials</h2>
