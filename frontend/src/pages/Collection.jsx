@@ -79,7 +79,7 @@ useEffect(()=>{
           <div className="flex flex-col gap-2 text-sm font-light">
             {["Topwear","Bottomwear","Winterwear"].map((categ)=>(
               <label  key={categ} className="flex gap-2 medium-14 text-gray-30">
-              <input onChange={(e)=>toggleFilter(e.targetFilter(e.target.value,setSubCategory))} type="checkbox" value={categ} className="w-3" /> {categ}
+              <input onChange={(e)=>toggleFilter(e.target.value,setSubCategory)} type="checkbox" value={categ} className="w-3" /> {categ}
             </label>
             ))}
             

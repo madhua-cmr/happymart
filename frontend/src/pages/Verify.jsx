@@ -8,22 +8,28 @@ import { toast } from "react-toastify"
 
 const Verify = () => {
 
-  const{navigate,token,setCartItems,backend_url} =useContext(ShopContext)
+  const{navigate,token,setCartItems,backend_url}=useContext(ShopContext)
   const[searchParams,setSearchParams]=useSearchParams()
 
   const success=searchParams.get('success');
   const orderId=searchParams.get('orderId');
 
   const verifyPayment=async()=>{
+   
 try {
-  if(!token){
-    return null;
-  }
+  
+
   const response=await axios.post(backend_url+'/api/order/verifyStripe',{success,orderId},{headers:{token}})
   if(response.data.success){
-    console.log("good")
-    setCartItems({})
-    navigate('/orders')
+ 
+    toast.success(response.data.message);
+    setCartItems({}) 
+    setTimeout(()=>{ 
+      
+      navigate('/orders')
+
+    },1500)
+  
   }else{
     console.log(response.data.message)
     navigate('/')
@@ -39,7 +45,7 @@ try {
   },[token])
 
   return (
-    <div>verify</div>
+    <div className="  h-[500px] w-full items-center justify-center flex "><div className="inset-0 z-50 text-[22px] font-bold ">Thanks For Ordering ! &#10084;</div></div>
   )
 }
 

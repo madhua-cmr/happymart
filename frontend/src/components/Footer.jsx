@@ -36,7 +36,7 @@ const Footer = () => {
                  <a href="https://www.instagram.com/madhumitha_a/" className="text-2xl text-white"><FaInstagram /></a>
             <a href="https://www.facebook.com/share/19d9x97C3T/" className="text-2xl text-white"><CiFacebook /></a>
             <a href="https://www.linkedin.com/in/madhumitha-a-b30ba5252" className="text-2xl text-white"><AiOutlineLinkedin /></a>
-            <a href="" className="text-2xl text-white"><FaXTwitter /></a> 
+            <a href="https://x.com/MADHUMI13563192" className="text-2xl text-white"><FaXTwitter /></a> 
         </div></div>
       </div>
     </div>

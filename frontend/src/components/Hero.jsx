@@ -9,8 +9,8 @@ const Hero = () => {
             <p className="pl-2 max-w-lg mt-6 mb-8 border-l-4 border-l-sky-900"> Your ultimate shopping destination where happiness meets convenience. Explore a curated collection of top-quality products designed to make your life easier, brighter, and more joyful. From everyday essentials to unique finds, we&apos;ve got something for everyone. Let&apos;s make shopping a happy experience!</p>
            
             <div className="flex gap-2 sm:gap-6 mt-14">
-                <Link className="btn-dark max-sm:!p-3">Trending Now</Link>
-                <Link className="btn-secondary max-sm:!p-3">Best Sellers</Link>
+                <Link className="btn-dark max-sm:!p-3" to="/trend">Trending Now</Link>
+                <Link className="btn-secondary max-sm:!p-3" to="/bestseller">Best Sellers</Link>
             </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { MdDeliveryDining } from "react-icons/md";
 import { FcLike } from "react-icons/fc";
-import Footer from "../components/Footer";
+
 import RelatedProducts from "../components/RelatedProducts";
 const Product = () => {
   const { productId } = useParams();

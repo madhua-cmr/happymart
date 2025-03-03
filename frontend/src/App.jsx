@@ -14,6 +14,8 @@ import Verify from "./pages/Verify"
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/Footer"
+import PopularProducts from "./components/PopularProducts"
+import NewArrivals from "./components/NewArrivals"
 
 function App() {
 
@@ -26,7 +28,10 @@ function App() {
       <Routes>
 
        <Route path="/" element={<Home/>}/>
+      
        <Route path="/collection" element={<Collection/>}/>
+       <Route path="/trend" element={<PopularProducts/>}/>
+       <Route path="/bestseller" element={<NewArrivals/>}/>
        <Route path="/about" element={<About/>}/>
        <Route path="/contact" element={<Contact/>}/>
        <Route path="/products/:productId" element={<Product/>}/>

@@ -2,7 +2,7 @@
 import { useContext, useState } from "react";
 import CartTotal from "./CartTotal";
 import { toast } from "react-toastify";
-import Footer from "../components/Footer";
+
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
 
@@ -35,9 +35,25 @@ const PlaceOrder = () => {
     const value = e.target.value;
     setformData((data) => ({ ...data, [name]: value }));
   };
+ const validation=()=>{
+  const phregex=/^[0-9]{10}$/
+  if(!phregex.test(formData.phno)){
+   toast.error("Phno should be 10 digits");
+   return false;
+  }
+  const pinregex=/^[0-9]{6}$/
+  if(!pinregex.test(formData.zipcode)){
+    toast.error("Enter valid 6 digit pincode");
+    return false;
+  }
 
+  return true;
+ }
   const onSubmitForm = async (e) => {
     e.preventDefault();
+    if(!validation()){
+      return;
+    }
     try {
       let orderItems = [];
       for (const items in cartItems) {
@@ -238,7 +254,7 @@ const PlaceOrder = () => {
           </div>
         </div>
       </form>
-      <Footer />
+  
     </section>
   );
 };

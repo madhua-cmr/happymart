@@ -19,6 +19,7 @@ const ShopContextProvider = ({children}) => {
  const backend_url=import.meta.env.VITE_BACKEND_URL;
  const [showSearch,setShowSearch]=useState(false);
  const [token,setToken]=useState('')
+ useEffect(()=>{setToken(localStorage.getItem("token"))},[])
  const addToCart=async(itemId,size)=>{
 
   if(!size){
@@ -137,27 +138,25 @@ const getUserCart=async(token)=>{
   toast.error(error.message)
   }
 }
-// Fetch products when the component mounts
 useEffect(() => {
   getProductsData();
 }, []);
 
-// Sync user cart when the token changes
 useEffect(() => {
   if (token) {
     getUserCart(token);
   }
 }, [token]);
 
-// Adjust delivery charges when the cart changes
 useEffect(() => {
-  if (getCartAmount() > 500) {
+  if (getCartAmount() > 500||getCartAmount()==0) {
     setDeliveryCharges(0);
   } else {
     setDeliveryCharges(20);
   }
 }, [cartItems]);
  
+useEffect(()=>{setToken(localStorage.getItem("token"))},[])
   const contextValue={products ,setCartItems,currency,delivery_charges,search,setSearch,setShowSearch,showSearch,addToCart,getCartCount,cartItems,backend_url,updatequantity,getCartAmount,token,setToken,navigate,getUserCart}
 
   return (

@@ -59,7 +59,7 @@ const stripePay=async(req,res)=>{
         const {userId,items,amount,address}=req.body;
         const{origin}=req.headers;
         const orderData={
-            userId,items,amount,address,paymentMethod:"COD",payment:false,date:Number(Date.now())
+            userId,items,amount,address,paymentMethod:"Stripe",payment:false,date:Number(Date.now())
         }
         const newOrder=new order(orderData);
         await newOrder.save();
@@ -90,8 +90,8 @@ const stripePay=async(req,res)=>{
             line_items,
             mode:'payment'
          })
-
-         res.json({success:true,session_url:session.url})
+console.log(newOrder.paymentMethod)
+         return res.json({success:true,session_url:session.url})
 
 
     } catch (error) {
@@ -101,20 +101,22 @@ const stripePay=async(req,res)=>{
 }
 
 
+
 const verifyStripe=async(req,res)=>{
     const {orderId,success,userId}=req.body;
+
     try {
         if(success=="true"){
             await order.findByIdAndUpdate(orderId,{payment:true})
             await userModel.findByIdAndUpdate(userId,{cartData:{}})
-            res.json({success:true})
+            return res.json({success:true,message:"Order placed successfully"})
         }else{
             await order.findByIdAndDelete(orderId)
-            res.json({success:false})
+            return res.json({success:false,error:"Order Failed"})
         }
     } catch (error) {
         console.log(error)
-        res.json({success:false,message:error.message})
+        return res.json({success:false,message:error.message})
     }
 }
 

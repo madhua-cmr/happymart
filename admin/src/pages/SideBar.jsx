@@ -3,8 +3,10 @@ import { FcAddImage } from "react-icons/fc";
 import { FcTodoList } from "react-icons/fc";
 import { AiFillProduct } from "react-icons/ai";
 import { RiLogoutCircleRLine } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
+
 const SideBar = ({token,setToken}) => {
+  const navigate=useNavigate()
   return (
     <div className=" flex sm:w-1/4 flex-row sm:h-[610px] h-[100px] items-center sm:flex-col justify-between p-4 font-bold bg-white ">
       <div className="flex flex-row justify-between items-center p-8  w-full  sm:h-full sm:flex-col ">
@@ -21,7 +23,7 @@ const SideBar = ({token,setToken}) => {
           <AiFillProduct  className=" max-sm:block hidden md:block text-[26px]"/>
         </NavLink>
       {token&&(
-      <button onClick={()=>setToken("")}className="flex   m-2 p-4 sm:w-full  justify-between items-center">
+      <button onClick={()=>{setToken("");navigate("/")}}className="flex   m-2 p-4 sm:w-full  justify-between items-center">
         <h5 className="hidden sm:block">Logout</h5>
         <RiLogoutCircleRLine  className="text-[26px]"/>
       </button>
